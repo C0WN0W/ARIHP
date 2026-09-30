@@ -6,8 +6,8 @@ illegal and fake ranking score for Phira
 
 ### TODO LIST
 - [x] Custom game title
-- [x] Force full score
-- [x] Force chart owner (Free to edit)
-- [ ] Force 100% accuracy
-- [ ] Force perfect judge
+- [x] Forcely full score
+- [x] Forcely chart owner (Free to edit)
+- [ ] Forcely 100% accuracy
+- [ ] Forcely perfect judge
 - [ ] Autoplay can rate
