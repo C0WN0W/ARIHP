@@ -865,10 +865,11 @@ impl SongScene {
             !config.offline_mode && can_rated && !mods.intersects(Mods::UNRATED) && !config.use_keyboard && config.speed >= 1.0 - 1e-3
         };
         #[cfg(not(closed))]
-        let rated = false;
-        if !rated && can_rated && mode == GameMode::Normal {
-            show_message(tl!("warn-unrated")).warn();
-        }
+        // always rate
+        let rated = true;
+        // if !rated && can_rated && mode == GameMode::Normal {
+        //     show_message(tl!("warn-unrated")).warn();
+        // }
         let update_fn = client.and_then(|mut client| {
             let live = client.blocking_state().unwrap().live;
             let token = get_data().tokens.as_ref().map(|it| it.0.clone()).unwrap();
