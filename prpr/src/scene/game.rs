@@ -499,10 +499,10 @@ impl GameScene {
                             .draw_using(&PGR_FONT)
                             .bottom()
                     });
-                    let ct = ui.text("COMBO").size(0.4).measure().center();
+                    let ct = ui.text("NIGGER").size(0.4).measure().center();
                     let combo_top = btm + 0.01 + ct.y;
                     self.chart.with_element(ui, res, UIElement::Combo, None, (0., combo_top), |ui, c| {
-                        ui.text(if res.config.autoplay() { "AUTOPLAY" } else { "COMBO" })
+                        ui.text("NIGGER")
                             .pos(0., combo_top)
                             .anchor(0.5, 0.5)
                             .size(0.4)
@@ -999,6 +999,7 @@ impl Scene for GameScene {
                         accuracy: result.accuracy as _,
                         full_combo: result.max_combo == result.num_of_notes,
                     });
+                    
                     self.next_scene = match self.mode {
                         GameMode::Normal | GameMode::NoRetry | GameMode::View => {
                             let historic_best = self.player.as_ref().map_or(0, |it| it.historic_best);

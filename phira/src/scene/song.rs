@@ -856,20 +856,19 @@ impl SongScene {
         is_unlock: bool,
     ) -> Result<LocalSceneTask> {
         let mut fs = fs_from_path(local_path)?;
-        let can_rated = id.is_some() || local_path.starts_with(':');
+        let can_rated = id.is_some();
         #[cfg(feature = "video")]
         let local_path = local_path.to_owned();
-        #[cfg(closed)]
+
+        // ok just remove the unrate message :(
         let rated = {
             let config = &get_data().config;
             !config.offline_mode && can_rated && !mods.intersects(Mods::UNRATED) && !config.use_keyboard && config.speed >= 1.0 - 1e-3
         };
-        #[cfg(not(closed))]
-        // always rate
-        let rated = true;
-        // if !rated && can_rated && mode == GameMode::Normal {
-        //     show_message(tl!("warn-unrated")).warn();
-        // }
+
+        if !rated && can_rated && mode == GameMode::Normal {
+            show_message(tl!("warn-unrated")).warn();
+        }
         let update_fn = client.and_then(|mut client| {
             let live = client.blocking_state().unwrap().live;
             let token = get_data().tokens.as_ref().map(|it| it.0.clone()).unwrap();
