@@ -2,7 +2,7 @@
 illegal and fake ranking score for Phira
 
 ### Only the modified parts have been uploaded. For personal study and research purposes only.
-<img width="975" height="636" alt="ba46865ccd91fba37b4b57249c8c2544" src="https://github.com/user-attachments/assets/b0ed166a-73a5-4ca9-9689-23c3b5759f67" />
+<img width="975" height="636" alt="168079630211230ba57ddfcd1c34e814" src="https://github.com/user-attachments/assets/afc95141-2f5a-45eb-b379-fdc2d1cf6491" />
 
 ### TODO LIST
 - [x] Custom game title
