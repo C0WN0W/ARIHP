@@ -12,4 +12,4 @@ illegal and fake ranking score for Phira
 - [ ] Forcely perfect judge
 - [ ] Autoplay can rate
 
-> Chart upload has disabled to pretend someone rape other players' chart
+> Chart upload has disabled to prevent malicious tampering other players' work
